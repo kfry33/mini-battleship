@@ -36,7 +36,6 @@ function generateUnits(alphabet, ship) {
     
     const paramsOne = dir === 0 ? randomNum : randomLetI;
 
-      // horizontal
       if(paramsOne + ship.size <= gridSize) {
         for(let i=0; i<ship.size; i++){
           const newCoord =
@@ -104,7 +103,6 @@ function playGame(alphabet, fleetSize) {
   const gridSize = alphabet.length;
   createGrid(gridSize);
   shipType.forEach((ship) => ships.push(generateUnits(alphabet, ship)));
-  // generateUnits(alphabet);
   console.log(ships);
   shipStatus();
   while (hits < fleetSize) {
@@ -115,6 +113,4 @@ function playGame(alphabet, fleetSize) {
 }
 
 // Game start
-
-
 playGame(alphabet, fleetCount);
